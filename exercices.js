@@ -93,10 +93,21 @@ const localMoney = " 🪙"
 
 //Rangeons les informations de la potion de soin dans un objet 🧹
 
-let healthPotion = {Nom:"Health Potion",Prix:50,Stock:10}
+let healthPotion = {Nom: "Health Potion", Prix: 50, Stock: 10}
 console.log(healthPotion)
 
 //Affichons les informations de la potion
 
 console.log(healthPotion.Nom);
 console.log(healthPotion["Prix"]);
+
+//C'est l'heure de faire l'inventaire...
+
+const inventory = [healthPotion = {Nom: "Health Potion", Prix: 50, Stock: 10},
+    manaPotion = {Nom: "Mana Potion", Prix: 35, Stock: 8},
+    innPotion = {Nom: "Inn Potion", Prix: 10, Stock: 25}
+]
+// inventory.push(healthPotion = {Nom: "Health Potion", Prix: 50, Stock: 10})
+// inventory.push(manaPotion = {Nom: "Mana Potion", Prix: 35, Stock: 8})
+// inventory.push(innPotion = {Nom: "Inn Potion", Prix: 10, Stock: 25})
+console.log(inventory)
