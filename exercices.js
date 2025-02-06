@@ -5,7 +5,7 @@ const storeName = "Valinor";
 let stockHealthPotion = 10;
 let costHealtPotion = 50
 let isStoreOpen = false;
-const localMoney = "🪙"
+const localMoney = " 🪙"
 
 //Affichage conditionnel
 if (isStoreOpen)
@@ -40,11 +40,32 @@ switch (parseInt(menu)) { //initialement case "1", case "2", etc... mais j'ai pa
 
 //Calcul du prix total d'une commande de potion 🪙
 
+// let buyPotions = prompt("Combien de potion souhaitez-vous acheter ?")
+// if (buyPotions > stockHealthPotion) {
+//     console.log("Il n'y a pas assez de potions en stock ! Cependant je peux te dire que cela t'aurai couté " + ((buyPotions * costHealtPotion) + localMoney))
+// }
+// if (buyPotions <= stockHealthPotion) {
+//     console.log(buyPotions + " potions ? J'ai ça en stock ! Cela va te couter " + (buyPotions * costHealtPotion) + localMoney)
+// } else {
+//     console.log("À mon grand âge, je n'ai pas compris ce que tu as essayé de dire, articule s'il te plait !")
+// }
+
+//Bourse de l'Aventurier 💰
+
+let adventurerMoney = 250;
 let buyPotions = prompt("Combien de potion souhaitez-vous acheter ?")
-if (buyPotions > stockHealthPotion) {
-    console.log("Il n'y a pas assez de potions en stock ! Cependant je peux te dire que cela t'aurai couté " + ((buyPotions * costHealtPotion)+localMoney))
-} else if (buyPotions < stockHealthPotion) {
-    console.log(buyPotions + " potions ? J'ai ça en stock ! Cela va te couter " + (buyPotions * costHealtPotion)+localMoney)
+let spendedMoney = buyPotions * costHealtPotion
+if ((costHealtPotion * buyPotions) > adventurerMoney) {
+    console.log("Tu n'as pas assez d'argent pour m'acheter autant de potions...Il te manque encore " + ((costHealtPotion * buyPotions) - adventurerMoney) + localMoney);
 } else {
-    console.log("À mon grand âge, je n'ai pas compris ce que tu as essayé de dire, articule s'il te plait !")
+    if (buyPotions > stockHealthPotion) {
+        console.log("Il n'y a pas assez de potions en stock ! Cependant je peux te dire que cela t'aurai couté " + ((buyPotions * costHealtPotion) + localMoney))
+    }
+    if (buyPotions <= stockHealthPotion) {
+        console.log(buyPotions + " potions ? J'ai ça en stock ! Cela va te couter " + (buyPotions * costHealtPotion) + localMoney)
+        adventurerMoney = adventurerMoney - spendedMoney;
+        console.log("Il te reste " + adventurerMoney + localMoney + " !");
+    }
 }
+
+
