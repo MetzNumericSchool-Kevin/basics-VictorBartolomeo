@@ -86,3 +86,7 @@ for (const listPotionsKey in listPotions) {
 listPotions.push("Magical Potion");
 console.log(listPotions);
 
+//Finaly, nope.
+
+listPotions.pop();
+console.log(listPotions);
