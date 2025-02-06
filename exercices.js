@@ -68,4 +68,9 @@ if ((costHealtPotion * buyPotions) > adventurerMoney) {
     }
 }
 
+//Liste des potions
+
+let listPotions=["Health Potion","Mana Potion","Inn Potion"];
+console.log(listPotions);
+
 
