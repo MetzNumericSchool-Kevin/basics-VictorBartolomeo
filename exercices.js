@@ -95,3 +95,8 @@ const localMoney = " 🪙"
 
 let healthPotion = {Nom:"Health Potion",Prix:50,Stock:10}
 console.log(healthPotion)
+
+//Affichons les informations de la potion
+
+console.log(healthPotion.Nom);
+console.log(healthPotion["Prix"]);
