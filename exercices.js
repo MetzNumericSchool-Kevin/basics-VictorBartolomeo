@@ -111,3 +111,19 @@ const inventory = [healthPotion = {Nom: "Health Potion", Prix: 50, Stock: 10},
 // inventory.push(manaPotion = {Nom: "Mana Potion", Prix: 35, Stock: 8})
 // inventory.push(innPotion = {Nom: "Inn Potion", Prix: 10, Stock: 25})
 console.log(inventory)
+
+//Aventurier, regarde tout ce que je vends !
+
+for (const inventoryKey in inventory) {
+    console.log(inventory[inventoryKey].Nom)
+    console.log(inventory[inventoryKey].Prix)
+    console.log(inventory[inventoryKey].Stock)
+}
+console.log("Autre version :\n" +
+    "\n")
+//Alternate version
+for (const inventoryKey in inventory) {
+    for (const inventoryKeyKey in inventory[inventoryKey]) {
+        console.log(inventory[inventoryKey][inventoryKeyKey])
+    }
+}
