@@ -81,3 +81,8 @@ for (const listPotionsKey in listPotions) {
     console.log("Nous avons de la \""+listPotions[listPotionsKey]+"\" !");
 }
 
+//Ajout d'une nouvelle potion
+
+listPotions.push("Magical Potion");
+console.log(listPotions);
+
