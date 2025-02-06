@@ -70,23 +70,28 @@ const localMoney = " 🪙"
 
 //Liste des potions
 
-let listPotions=["Health Potion","Mana Potion","Inn Potion"];
-console.log(listPotions);
+// let listPotions=["Health Potion","Mana Potion","Inn Potion"];
+// console.log(listPotions);
 
 //Affichage des potions
 
-console.log(listPotions[0]);
-console.log(listPotions[listPotions.length-1]);
-for (const listPotionsKey in listPotions) {
-    console.log("Nous avons de la \""+listPotions[listPotionsKey]+"\" !");
-}
+// console.log(listPotions[0]);
+// console.log(listPotions[listPotions.length-1]);
+// for (const listPotionsKey in listPotions) {
+//     console.log("Nous avons de la \""+listPotions[listPotionsKey]+"\" !");
+// }
 
 //Ajout d'une nouvelle potion
 
-listPotions.push("Magical Potion");
-console.log(listPotions);
+// listPotions.push("Magical Potion");
+// console.log(listPotions);
 
 //Finaly, nope.
 
-listPotions.pop();
-console.log(listPotions);
+// listPotions.pop();
+// console.log(listPotions);
+
+//Rangeons les informations de la potion de soin dans un objet 🧹
+
+let healthPotion = {Nom:"Health Potion",Prix:50,Stock:10}
+console.log(healthPotion)
